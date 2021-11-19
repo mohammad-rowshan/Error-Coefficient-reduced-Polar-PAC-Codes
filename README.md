@@ -4,4 +4,4 @@ Note that the main function is modify_profile.
 
 The details of this procedure can be found on https://arxiv.org/abs/2111.08843
 
-Moreover, there is a MATLAB script that returns the minmum Hamming weight of a prolar code with set I and the error coefficient (the total number of codewors minimum Hamming weight).
+Moreover, there is a MATLAB function that returns the minmum Hamming weight d_min of a prolar code (defined with set I) and the error coefficient (the total number of codewors minimum Hamming weight, A_dmin).
