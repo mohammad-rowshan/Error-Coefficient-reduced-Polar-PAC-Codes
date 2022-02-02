@@ -156,8 +156,7 @@ def modify_profile(profile,N,n):  #Set I >> Profile, N: code length, n : log2(N)
 			if addition<reduction:
 				Bc.remove(cand_to_unfreeze)
 				paired = True
-		if paired == True and cnt_sw<0:
-			cnt_sw += 1
+		if paired == True and cnt_sw<3: #You can sepcify the max pi here, e.g., 3. By putting zero, you will avoid any code modifications.
 			B.remove(cand_to_freeze)
 			profile[cand_to_freeze] = 0
 			profile[cand_to_unfreeze] = 1
