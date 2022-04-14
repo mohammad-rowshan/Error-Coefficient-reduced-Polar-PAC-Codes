@@ -1,3 +1,15 @@
+# Polar/RM Code Modification for reducing the error-coefficient #######################
+#
+# Copyright (c) 2021, Mohammad Rowshan
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without modification, 
+# are permitted provided that:
+# the source code retains the above copyright notice, and te redistribtuion condition.
+# 
+# Freely distributed for educational and research purposes
+########################################################################################
+
 def supp_bin(bnry):
 	indices_of_1s = set()
 	for x in range(len(bnry)): 
