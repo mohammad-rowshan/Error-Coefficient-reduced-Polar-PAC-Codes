@@ -51,7 +51,10 @@ function I =  construct_dega(design_snr_db, N, K)
     end
     
     mask = zeros(N,3);
-    nat = bitrevorder(0:N-1);
+    for i = 0:N-1
+        nat(i+1) = bitreversed(i,uint8(log2(N)));
+    end
+    %nat = bitrevorder(0:N-1);
     for i = 1:N
         mask(i,:) = [nat(i), mllr(i), 1];
     end
@@ -64,6 +67,10 @@ function I =  construct_dega(design_snr_db, N, K)
     % sort channels with respect to index (in bitreversal order; line 42
     mask = sortrows(mask,1); %direction: ascend (default)
     I = find(mask(:,3)==1)-1;
+end
+
+function dec = bitreversed(i,n) % You can instead use bitrevorder() in "Singal Processing" toolbox.
+    dec = bin2dec(fliplr(dec2bin(i,n)));
 end
 
 % returns Phi inverse based on piece-wise linear approximation
